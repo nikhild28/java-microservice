@@ -1,1 +1,5 @@
 /home/niveus/Documents/java/java-microservice/src/main/java/com/example/microservice/MicroserviceApplication.java
+/home/niveus/Documents/java/java-microservice/src/main/java/com/example/microservice/repository/UserRepository.java
+/home/niveus/Documents/java/java-microservice/src/main/java/com/example/microservice/model/User.java
+/home/niveus/Documents/java/java-microservice/src/main/java/com/example/microservice/controller/UserController.java
+/home/niveus/Documents/java/java-microservice/src/main/java/com/example/microservice/service/UserService.java

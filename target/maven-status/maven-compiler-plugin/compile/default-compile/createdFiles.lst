@@ -1,2 +1,6 @@
+com/example/microservice/repository/UserRepository.class
+com/example/microservice/controller/UserController.class
+com/example/microservice/model/User.class
+com/example/microservice/service/UserService.class
 com/example/microservice/HelloController.class
 com/example/microservice/MicroserviceApplication.class
