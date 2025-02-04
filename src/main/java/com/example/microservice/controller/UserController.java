@@ -18,20 +18,20 @@ import com.example.microservice.model.User;
 import com.example.microservice.service.UserService;
 
 @RestController
-@RequestMapping("/api/user-management/users")
+@RequestMapping("/api/user-management")
 public class UserController {
 
     @Autowired
     private UserService userService;
 
     // GET all users
-    @GetMapping
+    @GetMapping("/get-users")
     public List<User> getAllUsers() {
         return userService.getAllUsers();
     }
 
     // GET user by ID
-    @GetMapping("/{id}")
+    @GetMapping("/get-user/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         Optional<User> user = userService.getUserById(id);
         return user.map(ResponseEntity::ok)
@@ -39,13 +39,13 @@ public class UserController {
     }
 
     // POST - Create a new user
-    @PostMapping
+    @PostMapping("/create-user")
     public User createUser(@RequestBody User user) {
         return userService.createUser(user);
     }
 
     // PUT - Update user
-    @PutMapping("/{id}")
+    @PutMapping("/update-user/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails) {
         try {
             User updatedUser = userService.updateUser(id, userDetails);
@@ -56,7 +56,7 @@ public class UserController {
     }
 
     // DELETE - Delete user
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete-user/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();
