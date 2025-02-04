@@ -18,7 +18,7 @@ import com.example.microservice.model.User;
 import com.example.microservice.service.UserService;
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/api/user-management/users")
 public class UserController {
 
     @Autowired
